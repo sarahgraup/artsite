@@ -1,4 +1,3 @@
-// components/artwork-card.tsx
 import Image from "next/image";
 import { IArtwork } from "../types/artwork";
 
@@ -15,6 +14,7 @@ export function ArtworkCard({ artwork }: { artwork: IArtwork }) {
             className='w-full h-auto'
             priority={false}
           />
+          <div className='absolute inset-0 bg-black opacity-0 hover:opacity-10 transition-opacity duration-300'></div>
         </div>
       </div>
     </div>
