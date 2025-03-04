@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #fcf6f0;
+  --foreground: #171717;
+  --color-raw-sienna-50: #fcf6f0;
+  --color-sienna-100: #f8ebdc;
+  --color-sienna-200: #f1d3b7;
+  --color-sienna-300: #e7b68a;
+  --color-sienna-400: #db8951;
+  --color-sienna-500: #d5723a;
+  --color-sienna-600: #c75c2f;
+  --color-sienna-700: #a54729;
+  --color-sienna-800: #853b27;
+  --color-sienna-900: #6b3223;
+  --color-dorado-300: #ada097;
+  --color-dorado-600: #73605b;
+  --color-dorado-900: #473c3c;
+  --color-blumine-700: #335367;
+  --color-light-50:#f2ede7;
+  --color-brownish-300:#d1a98f;
+
+  --accent: #4361ee;
+  --muted: #f3f4f6;
+}
+
+
+body {
+  color: var(--color-sienna-50);
+  background: var(--background);
+}
+
