@@ -1,7 +1,7 @@
 'use client';
 import { artworks } from './types/artwork';
-import { ArtworkCard } from "./components/ArtworkCard";
-import { useState } from "react";
+import { ArtworkCard } from './components/ArtworkCard';
+import { useState } from 'react';
 import { ImageModal } from './components/ImageModal';
 
 export default function Home() {
@@ -12,7 +12,7 @@ export default function Home() {
     setInitialIndex(index);
    
     setModalOpen(true);
-     console.log("index", index);
+    console.log('index', index);
     
   };
 

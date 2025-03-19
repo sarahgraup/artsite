@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 export default function Page() {
   return (
@@ -71,7 +71,7 @@ export default function Page() {
       <section className='mt-24 text-center max-w-3xl mx-auto'>
         <p className='text-lg font-extralight text-dorado-600 leading-loose'>
           If you’re interested in seeing my work, collaborating, or just
-          chatting about the beautiful chaos of art and code, feel free to{" "}
+          chatting about the beautiful chaos of art and code, feel free to{' '}
           <a href='/contact' className='underline font-semibold'>
             reach out
           </a>

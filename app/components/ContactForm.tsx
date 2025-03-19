@@ -1,12 +1,12 @@
-"use client";
-import { ChangeEvent, FormEvent, useState } from "react";
-import { IFormData, IFormErrors } from "../types/interfaceForm";
+'use client';
+import { ChangeEvent, FormEvent, useState } from 'react';
+import { IFormData, IFormErrors } from '../types/interfaceForm';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState<IFormData>({
-    name: "",
-    email: "",
-    message: "",
+    name: '',
+    email: '',
+    message: '',
   });
 
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
@@ -14,39 +14,39 @@ export default function ContactForm() {
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [errors, setErrors] = useState<IFormErrors>({});
 
-    const validateForm = (): boolean => {
-        const newErrors: IFormErrors = {};
-        if (!formData.name.trim()) {
-            newErrors.name = 'Name is required';
-        }
-        if (!formData.email.trim()) {
-            newErrors.email = 'Email is required';
-        }
-        if (!formData.message.trim()) {
-            newErrors.message = 'Message is required';
-        }
-        setErrors(newErrors);
-        setIsSubmitting(false);
-        return Object.keys(newErrors).length === 0;
+  const validateForm = (): boolean => {
+    const newErrors: IFormErrors = {};
+    if (!formData.name.trim()) {
+      newErrors.name = 'Name is required';
+    }
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email is required';
+    }
+    if (!formData.message.trim()) {
+      newErrors.message = 'Message is required';
+    }
+    setErrors(newErrors);
+    setIsSubmitting(false);
+    return Object.keys(newErrors).length === 0;
         
-    };
+  };
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitError(null);
-      setSubmitSuccess(null);
-      if (!validateForm()) return;
+    setSubmitSuccess(null);
+    if (!validateForm()) return;
     try {
-      const resp = await fetch("");
+      const resp = await fetch('');
       if (!resp.ok) {
-        throw new Error("Failed to submit the form");
+        throw new Error('Failed to submit the form');
       }
-      setFormData({ name: "", email: "", message: "" });
+      setFormData({ name: '', email: '', message: '' });
       setSubmitSuccess(true);
     } catch (err) {
       setSubmitError(
-        err instanceof Error ? err.message : "An unknown error occurred"
+        err instanceof Error ? err.message : 'An unknown error occurred',
       );
       setSubmitSuccess(false);
     }
@@ -54,7 +54,7 @@ export default function ContactForm() {
   };
 
   const handleChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -97,9 +97,9 @@ export default function ContactForm() {
             value={formData.name}
             onChange={handleChange}
             className={`w-full py-2 border-b border-dorado-900 focus:outline-none bg-transparent${
-              errors.name ? "border-red-500" : "border-dorado-900"
+              errors.name ? 'border-red-500' : 'border-dorado-900'
             }`}
-            style={{ backgroundColor: "var(--background)" }}
+            style={{ backgroundColor: 'var(--background)' }}
           />
           {errors.name && (
             <p className='mt-1 text-sm text-red-600'>{errors.name}</p>
@@ -120,9 +120,9 @@ export default function ContactForm() {
             name='email'
             id='email'
             className={`w-full py-2 border-b border-dorado-900 focus:outline-none bg-transparent${
-              errors.name ? "border-red-500" : "border-dorado-900"
+              errors.name ? 'border-red-500' : 'border-dorado-900'
             }`}
-            style={{ backgroundColor: "var(--background)" }}
+            style={{ backgroundColor: 'var(--background)' }}
           />
           {errors.email && (
             <p className='mt-1 text-sm text-red-600'>{errors.email}</p>
@@ -142,9 +142,9 @@ export default function ContactForm() {
             value={formData.message}
             onChange={handleChange}
             className={`w-full py-2 border-b border-dorado-900 focus:outline-none bg-transparent${
-              errors.name ? "border-red-500" : "border-dorado-900"
+              errors.name ? 'border-red-500' : 'border-dorado-900'
             }`}
-            style={{ backgroundColor: "var(--background)" }}
+            style={{ backgroundColor: 'var(--background)' }}
           />
           {errors.message && (
             <p className='mt-1 text-sm text-red-600'>{errors.message}</p>
@@ -156,10 +156,10 @@ export default function ContactForm() {
           className={` py-3 px-4 bg-bluemine-700 hover:bg-dorado-600
           text-white 
           rounded-full ${
-            isSubmitting ? "opacity-70 cursor-not-allowed" : ""
-          }`}
+    isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
+    }`}
         >
-          {isSubmitting ? "Sending..." : "Contact Me"}
+          {isSubmitting ? 'Sending...' : 'Contact Me'}
         </button>
       </form>
     </div>

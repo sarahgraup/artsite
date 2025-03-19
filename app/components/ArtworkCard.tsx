@@ -1,5 +1,5 @@
-import Image from "next/image";
-import { IArtwork } from "../types/artwork";
+import Image from 'next/image';
+import { IArtwork } from '../types/artwork';
 
 export function ArtworkCard({ artwork }: { artwork: IArtwork }) {
   return (

@@ -1,7 +1,7 @@
-import { useState } from "react";
-import Image from "next/image";
-import { IImageModalProps } from "../types/artwork";
-import { XIcon, ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
+import { useState } from 'react';
+import Image from 'next/image';
+import { IImageModalProps } from '../types/artwork';
+import { XIcon, ChevronLeftIcon, ChevronRightIcon } from 'lucide-react';
 
 export function ImageModal({
   artworks,
@@ -9,22 +9,22 @@ export function ImageModal({
   isOpen,
   onClose,
 }: IImageModalProps) {
-    const [currentIndex, setCurrentIndex] = useState(initialIndex);
-    console.log("index in modal", currentIndex);
+  const [currentIndex, setCurrentIndex] = useState(initialIndex);
+  console.log('index in modal', currentIndex);
 
   if (!isOpen) return null;
 
-    const currentArtwork = artworks[currentIndex];
+  const currentArtwork = artworks[currentIndex];
 
-      const goToNext = () => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % artworks.length);
-      };
+  const goToNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % artworks.length);
+  };
 
-      const goToPrevious = () => {
-        setCurrentIndex(
-          (prevIndex) => (prevIndex - 1 + artworks.length) % artworks.length
-        );
-      };
+  const goToPrevious = () => {
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + artworks.length) % artworks.length,
+    );
+  };
 
   return (
     <div className='fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center'>
