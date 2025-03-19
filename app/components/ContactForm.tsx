@@ -70,8 +70,8 @@ export default function ContactForm() {
   };
 
   return (
-    <div className='w-full max-w-xl mx-auto'>
-      <h2 className='text-2xl font-bold mb-6 text-dorado-900'>Get in Touch</h2>
+    <div className='w-full max-w-xl '>
+      {/* <h2 className='text-2xl font-bold mb-6 text-dorado-900'>Contact</h2> */}
       {submitSuccess && (
         <div className='mb-6 p-4 bg-green-100 text-green-700 rounded-md'>
           Thank you for your message! I will get back to you soon.
@@ -138,7 +138,7 @@ export default function ContactForm() {
           <textarea
             id='message'
             name='message'
-            rows={4}
+            rows={2}
             value={formData.message}
             onChange={handleChange}
             className={`w-full py-2 border-b border-dorado-900 focus:outline-none bg-transparent${
@@ -153,7 +153,7 @@ export default function ContactForm() {
         <button
           type='submit'
           disabled={isSubmitting}
-          className={` py-3 px-4 bg-dorado-900 hover:bg-dorado-600
+          className={` py-3 px-4 bg-bluemine-700 hover:bg-dorado-600
           text-white 
           rounded-full ${
             isSubmitting ? "opacity-70 cursor-not-allowed" : ""
