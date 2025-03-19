@@ -1,22 +1,5 @@
-// import type { Config } from "tailwindcss";
-
-// export default {
-//   content: [
-//     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-//     "./components/**/*.{js,ts,jsx,tsx,mdx}",
-//     "./app/**/*.{js,ts,jsx,tsx,mdx}",
-//   ],
-//   theme: {
-//     extend: {
-//       colors: {
-//         background: "var(--background)",
-//         foreground: "var(--foreground)",
-//       },
-//     },
-//   },
-//   plugins: [],
-// } satisfies Config;
 import type { Config } from "tailwindcss";
+import  { fontFamily } from'tailwindcss/defaultTheme';
 
 const config: Config = {
   content: [
@@ -26,6 +9,14 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        host: ["var(--font-host)", ...fontFamily.sans],
+        cinzel: ["var(--font-header)", ...fontFamily.serif],
+        combo: ["var(--font-combo)", ...fontFamily.sans],
+        inter: ["var(--font-inter)", ...fontFamily.sans],
+        italiana: ["var(--font-italiana)", ...fontFamily.mono],
+        dosis: ["var(--font-dosis)", ...fontFamily.sans],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
@@ -50,6 +41,10 @@ const config: Config = {
         },
         bluemine: {
           700: "var(--color-blumine-700)",
+        },
+        creamy: {
+          50: "var(--color-creamy-50)",
+          300: "var(--color-creamy-300)",
         },
       },
       borderRadius: {},

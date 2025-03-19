@@ -1,8 +1,40 @@
-import { Inter, Playfair_Display } from "next/font/google";
+import { Inter, Host_Grotesk, Combo, Cinzel, Italiana, Dosis } from "next/font/google";
 
-export const inter = Inter({ subsets: ["latin"] });
-
-export const playfair = Playfair_Display({
+export const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "600", "700"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-inter",
 });
+
+export const host = Host_Grotesk({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-host",
+});
+
+export const header = Cinzel({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-header",
+});
+
+export const combo = Combo({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-combo",
+});
+
+
+export const italiana = Italiana({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-italiana",
+});
+
+export const dosis = Dosis({
+  subsets: ["latin"],
+  weight: ["300", "400","500", "600", "700"],
+  variable: "--font-dosis",
+});
+
+

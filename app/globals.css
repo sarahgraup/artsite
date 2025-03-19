@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --background: #fcf6f0;
+  --background: #ffffff;
   --foreground: #171717;
   --color-raw-sienna-50: #fcf6f0;
   --color-sienna-100: #f8ebdc;
@@ -20,15 +20,29 @@
   --color-dorado-900: #473c3c;
   --color-blumine-700: #335367;
   --color-light-50:#f2ede7;
-  --color-brownish-300:#d1a98f;
+  --color-creamy-300:#d1a98f;
+  --color-creamy-50: #cec2b4;
 
   --accent: #4361ee;
   --muted: #f3f4f6;
 }
+@layer base{
+ h2 {
+    font-family: var(--font-italiana);
+    color:var(--color-dorado-900)
+
+}
+
+}
 
 
 body {
-  color: var(--color-sienna-50);
+  color: var(--color-dorado-600);
   background: var(--background);
+  font-family: var(--font-dosis);
+  
+
+
 }
 
+ 
