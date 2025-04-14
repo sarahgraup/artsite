@@ -4,7 +4,10 @@ export default function Page() {
   return (
     <main className="min-h-screen bg-white text-gray-900 p-6 md:p-12">
       {/* ABOUT Heading */}
-      <h1 className="text-[14rem] leading-none font-italiana z-10">ABOUT</h1>
+      
+      <h1 className="text-7xl sm:text-8xl md:text-[10rem] lg:text-[14rem] leading-none font-italiana z-10">
+        ABOUT
+      </h1>
 
       {/* First Section */}
       <section className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mt-12">
@@ -76,18 +79,8 @@ export default function Page() {
             </a>
           </div>
         </div>
-        {/* Skills & Experience */}
-        {/* <div>
-          <h2 className="text-4xl font-semibold mb-4">Skills & Experience</h2>
-          <ul className="text-xl font-extralight text-dorado-600 space-y-2">
-            <li>🎨 Digital Illustration & Mixed Media</li>
-            <li>💡 Creative Direction & Concept Art</li>
-            <li>📱 UI/UX Design for Web & Mobile</li>
-            <li>🖥️ Next.js & Frontend Development</li>
-          </ul>
-        </div> */}
+  
       </section>
-      {/* Closing Call to Action */}
       <section className="mt-24 text-center max-w-3xl mx-auto">
         <p className="text-lg font-extralight text-dorado-600 leading-loose">
           If you’re interested in seeing my work, collaborating, or just
